@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<define name="MCT_Performance">
+		<element name="performance">
+			<!-- This element might be used by reference -->
+			<ref name="BAT_Referenceable"/>
+			<!-- Elements common to all musical events -->
+			<ref name="MAT_MusicalEvent"/>
+			<!-- List of conductors -->
+			<ref name="MLT_Conductors"/>
+			<!-- List of performers -->
+			<ref name="MLT_Performers"/>
+			<!-- Performed pieces -->
+			<ref name="MLT_Pieces"/>
+		</element>
+	</define>
+</grammar>

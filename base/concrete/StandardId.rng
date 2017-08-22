@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<define name="BCT_StandardId">
+		<element name="standardId">
+			<!-- Related standard -->
+			<choice>
+				<ref name="BCT_Standard"/>
+				<ref name="BRT_Standard"/>
+			</choice>
+			<!-- Id of the record within the standard, divided into segments -->
+			<ref name="BLT_StandardId_Segments"/>
+		</element>
+	</define>
+</grammar>

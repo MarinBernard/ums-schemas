@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+	<define name="BAT_Place">
+		<!-- Inheritance from the Item abstract type for labelVariants -->
+		<optional>
+			<ref name="BAT_Item"/>
+		</optional>
+		<!-- Home city or country -->
+		<choice>
+			<ref name="BCT_City"/>
+			<ref name="BRT_City"/>
+			<ref name="BCT_CountryDivision"/>
+			<ref name="BRT_CountryDivision"/>
+			<ref name="BCT_Country"/>
+			<ref name="BRT_Country"/>
+		</choice>
+	</define>
+</grammar>

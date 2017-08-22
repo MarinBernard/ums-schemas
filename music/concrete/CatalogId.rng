@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<define name="MCT_CatalogId">
+		<element name="catalogId">
+			<!-- Description of the catalog (concrete or reference) -->
+			<choice>
+				<ref name="MCT_Catalog"/>
+				<ref name="MRT_Catalog"/>
+			</choice>
+			<!-- Id of the record within the catalog, divided into segments -->
+			<ref name="BLT_StandardId_Segments"/>
+		</element>
+	</define>
+</grammar>

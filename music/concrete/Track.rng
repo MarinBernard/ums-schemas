@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<define name="MCT_Track">
+		<element name="track">
+			<!-- Abstract base track type -->
+			<ref name="BAT_Track"/>
+			<!-- Related piece -->
+			<attribute name="piece">
+				<data type="string"/>
+			</attribute>			
+			<!-- Related section -->
+			<attribute name="section">
+				<data type="string"/>
+			</attribute>
+			<!-- Related performance -->
+			<choice>
+				<ref name="MCT_Performance"/>
+				<ref name="MRT_Performance"/>
+			</choice>
+		</element>
+	</define>
+</grammar>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+	<define name="MLT_Composers">
+		<element name="composers">
+			<oneOrMore>
+				<choice>
+					<ref name="MCT_Composer"/>
+					<ref name="MRT_Composer"/>
+				</choice>
+			</oneOrMore>
+		</element>
+	</define>
+</grammar>

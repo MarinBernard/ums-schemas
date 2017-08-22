@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<define name="BAT_Referenceable">
+		<optional>
+			<attribute name="uid">
+				<data type="string"/>
+			</attribute>
+			<attribute name="src">
+				<data type="anyURI"/>
+			</attribute>
+		</optional>
+	</define>
+</grammar>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<define name="MAT_MusicalEvent">
+		<!-- Full or partial date -->
+		<choice>
+			<ref name="BCT_Date"/>
+			<ref name="BCT_Year"/>
+			<group>
+				<ref name="BCT_Year"/>
+				<ref name="BCT_Month"/>
+			</group>
+		</choice>
+		<!-- Full or partial place -->
+		<optional>
+			<ref name="MCT_Place"/>
+		</optional>
+	</define>
+</grammar>

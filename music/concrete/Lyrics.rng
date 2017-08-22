@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+	<!-- Actual lyrics element -->
+	<define name="MCT_Lyrics">
+		<element name="lyrics">
+			<!-- This element might be used by reference -->
+			<ref name="BAT_Referenceable"/>
+			<!-- Entry point is the stanza -->
+			<oneOrMore>
+				<ref name="MCT_Stanza"/>
+			</oneOrMore>
+		</element>
+	</define>
+	<!--======================================================================
+	 !	Sub elements which are only used in this context
+	 =========================================================================-->
+	<!-- A verse in a lyrics context -->
+	<define name="MCT_Verse">
+		<element name="verse">
+			<text/>
+		</element>
+	</define>
+	<!-- A stanza in a lyrics context -->
+	<define name="MCT_Stanza">
+		<element name="stanza">
+			<oneOrMore>
+				<ref name="MCT_Singer"/>
+			</oneOrMore>
+		</element>
+	</define>
+	<!-- A singer voice in a lyrics context -->
+	<define name="MCT_Singer">
+		<element name="singer">
+			<optional>
+				<choice>
+					<!-- Singer plays a character -->
+					<attribute name="character">
+						<text/>
+					</attribute>
+					<!-- Singer plays an instrument -->
+					<attribute name="instrument">
+						<text/>
+					</attribute>
+				</choice>
+			</optional>
+			<oneOrMore>
+				<choice>
+					<!-- Other singers in unison -->
+					<ref name="MCT_Singer"/>
+					<!-- Actual sung text -->
+					<ref name="MCT_Verse"/>
+				</choice>
+			</oneOrMore>
+		</element>
+	</define>
+</grammar>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+	<define name="MCT_Catalog">
+		<element name="catalog">
+			<!-- This element might be used by reference -->
+			<ref name="BAT_Referenceable"/>
+			<!-- Abstract properties common to all standards -->
+			<ref name="BAT_Standard"/>
+		</element>
+	</define>
+</grammar>

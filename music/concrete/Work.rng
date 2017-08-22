@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+	<define name="MCT_Work">
+		<element name="work">
+			<!-- This element might be used by reference -->
+			<ref name="BAT_Referenceable"/>
+			<!-- Inheritance from the Product abstract type -->
+			<ref name="BAT_Product"/>
+			<!-- Related music books -->
+			<optional>
+				<choice>
+					<ref name="MCT_Score"/>
+					<ref name="MRT_Score"/>
+				</choice>
+			</optional>
+			<!-- Catalog IDs associated to the composition -->
+			<optional>
+				<ref name="MLT_CatalogIds"/>
+			</optional>
+			<!-- Composers of the music work -->
+			<ref name="MLT_Composers"/>
+			<!-- Lyricists of the music work -->
+			<optional>
+				<ref name="MLT_Lyricists"/>
+			</optional>
+			<!-- Form of the music work -->
+			<choice>
+				<ref name="MCT_Form"/>
+				<ref name="MRT_Form"/>
+			</choice>
+			<!-- Style of the music work -->
+			<choice>
+				<ref name="MCT_Style"/>
+				<ref name="MRT_Style"/>
+			</choice>
+			<!-- Instruments of the music work -->
+			<ref name="MLT_Instruments"/>
+			<!-- Main key of the work -->
+			<optional>
+				<choice>
+					<ref name="MCT_Key"/>
+					<ref name="MRT_Key"/>
+				</choice>
+			</optional>
+			<!-- Characters present in the work -->
+			<optional>
+				<ref name="BLT_Characters"/>
+			</optional>
+			<!-- Inception event of the music work -->
+			<optional>
+				<ref name="BCT_Inception"/>
+			</optional>	
+			<!-- Completion event of the music work -->
+			<optional>
+				<ref name="BCT_Completion"/>
+			</optional>			
+			<!-- Première event of the music work -->
+			<optional>
+				<element name="premiere">
+					<ref name="MAT_MusicalEvent"/>
+				</element>
+			</optional>
+			<!-- Layout of the work divided in movement sections -->
+			<ref name="MLT_Sections"/>
+		</element>
+	</define>
+</grammar>

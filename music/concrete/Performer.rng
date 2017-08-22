@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<define name="MCT_Performer">
+		<element name="performer">
+			<!-- Whether the performer is a soloist -->
+			<optional>
+				<attribute name="soloist">
+					<data type="boolean"/>
+				</attribute>
+			</optional>
+			<choice>
+				<!-- Ensemble -->
+				<group>
+					<choice>
+						<ref name="MCT_Ensemble"/>
+						<ref name="MRT_Ensemble"/>
+					</choice>
+					<optional>
+						<ref name="MLT_Instruments"/>
+					</optional>
+				</group>
+				<!-- Instrumentalist -->
+				<group>
+					<choice>
+						<ref name="MCT_Instrumentalist"/>
+						<ref name="MRT_Instrumentalist"/>
+					</choice>
+					<optional>
+						<ref name="MLT_Instruments"/>
+					</optional>
+				</group>
+			</choice>
+		</element>
+	</define>
+</grammar>
