@@ -31,6 +31,7 @@
 	<include href="concrete/LinkVariant.rng"/>
 	<include href="concrete/Month.rng"/>
 	<include href="concrete/NameVariant.rng"/>
+	<include href="concrete/PictureVariant.rng"/>
 	<include href="concrete/Release.rng"/>
 	<include href="concrete/Standard.rng"/>
 	<include href="concrete/StandardId.rng"/>
@@ -45,6 +46,7 @@
 	<include href="list/LabelVariants.rng"/>
 	<include href="list/LinkVariants.rng"/>
 	<include href="list/NameVariants.rng"/>
+	<include href="list/PictureVariants.rng"/>
 	<include href="list/Releases.rng"/>
 	<include href="list/StandardIds.rng"/>
 	<include href="list/StandardId_Segments.rng"/>

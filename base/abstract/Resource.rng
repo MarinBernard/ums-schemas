@@ -5,6 +5,9 @@
 			<ref name="BLT_LinkVariants"/>
 		</optional>
 		<optional>
+			<ref name="BLT_PictureVariants"/>
+		</optional>
+		<optional>
 			<ref name="BLT_StandardIds"/>
 		</optional>
 	</define>

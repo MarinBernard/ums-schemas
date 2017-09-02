@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+	datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+	<define name="BCT_PictureVariant">
+		<element name="pictureVariant">
+			<attribute name="type">
+				<choice>
+					<data type="string"/>
+				</choice>
+			</attribute>			
+			<attribute name="lang">
+				<text/>
+			</attribute>
+			<optional>
+				<attribute name="original">
+					<data type="boolean"/>
+				</attribute>
+			</optional>
+			<optional>
+				<attribute name="default">
+					<data type="boolean"/>
+				</attribute>
+			</optional>
+			<attribute name="src">
+				<data type="anyURI"/>
+			</attribute>
+		</element>
+	</define>
+</grammar>
